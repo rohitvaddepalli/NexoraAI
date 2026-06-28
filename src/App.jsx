@@ -143,11 +143,11 @@ function LayoutWrapper({ children }) {
 
   if (useSidebar) {
     return (
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen overflow-x-hidden">
         <Sidebar />
-        <div className="flex-1 flex flex-col" style={{ marginLeft: '220px' }}>
+        <div className="flex flex-col min-w-0" style={{ marginLeft: '220px', width: 'calc(100% - 220px)' }}>
           <SidebarTopBar />
-          <main className="flex-1">
+          <main className="flex-1 min-w-0">
             {children}
           </main>
           <Footer />
@@ -169,7 +169,7 @@ function LayoutWrapper({ children }) {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0A0A0F]">
+    <div className="min-h-screen bg-[#0A0A0F] overflow-x-hidden">
       <Suspense fallback={<PageFallback />}>
         <LayoutWrapper>
           <AnimatedRoutes />

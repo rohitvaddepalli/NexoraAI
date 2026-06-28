@@ -24,7 +24,6 @@ function TrendingCard({ tool, index }) {
       transition={{ delay: index * 0.06 }}
       className="relative flex-shrink-0 w-64 bg-[#13131A] border border-[#1E1E2E] rounded-xl p-5 hover:border-[#7C6EF5]/40 hover:shadow-[0_8px_32px_rgba(124,110,245,0.12)] transition-all group"
     >
-      {/* Full-card clickable overlay */}
       <Link to={`/tool/${tool.id}`} className="absolute inset-0 z-10 rounded-xl" aria-label={`View ${tool.name}`} />
 
       <div className="flex items-center justify-between mb-3">
